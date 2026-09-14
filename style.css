@@ -1,0 +1,415 @@
+/* SETĂRI GENERALE ȘI RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f2e1;
+    color: #2e2b25;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* HEADER & MENIU CU TRANZIȚII */
+.site-header {
+    background-color: #3b372e;
+    border-bottom: 2px solid #27241e;
+    padding: 18px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    color: #dfba53;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.logo-box:hover .logo-icon {
+    transform: rotate(90deg);
+}
+
+.logo-title {
+    color: #f7f2e1;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #f7f2e1;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #dfba53;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION CU ANIMATIE DE INTRARE */
+.hero-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-grid {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #2e2b25;
+    margin-bottom: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.hero-lead {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    color: #4a453b;
+    font-weight: 600;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    color: #5c564b;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image-box {
+    flex: 1.3;
+    min-width: 320px;
+}
+
+.hero-image-box img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #3b372e;
+    box-shadow: 8px 8px 0px #dfba53;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image-box img:hover {
+    transform: translateY(-4px);
+    box-shadow: 12px 12px 0px #dfba53;
+}
+
+/* SECȚIUNI DE CONȚINUT */
+.content-section {
+    padding: 70px 5%;
+}
+
+.alt-bg {
+    background-color: #ede5cc;
+    border-top: 2px solid #ded3b4;
+    border-bottom: 2px solid #ded3b4;
+}
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: #2e2b25;
+    margin-bottom: 25px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.content-section h2 span {
+    color: #dfba53;
+    font-size: 1.4rem;
+}
+
+.section-desc {
+    color: #5c564b;
+    margin-bottom: 35px;
+    font-size: 1.15rem;
+}
+
+.text-block p {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    color: #4a453b;
+}
+
+/* CARD SERVICII CU DESIGN RETRO-CURAT */
+.service-card {
+    background-color: #f7f2e1;
+    border: 4px solid #3b372e;
+    box-shadow: 6px 6px 0px #dfba53;
+    padding: 40px;
+    margin-top: 25px;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #3b372e;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.6rem;
+    color: #2e2b25;
+    font-weight: 800;
+}
+
+.price-tag {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2e2b25;
+    background-color: #dfba53;
+    padding: 8px 20px;
+    border: 3px solid #3b372e;
+}
+
+.card-intro {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #2e2b25;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    margin-bottom: 14px;
+    color: #4a453b;
+    position: relative;
+    padding-left: 24px;
+}
+
+.features-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #dfba53;
+    font-weight: bold;
+}
+
+/* FAQ SECTION */
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.faq-item {
+    background-color: #f7f2e1;
+    border: 3px solid #3b372e;
+    box-shadow: 4px 4px 0px #dfba53;
+    padding: 25px;
+    transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(4px);
+}
+
+.faq-item h3 {
+    font-size: 1.25rem;
+    color: #2e2b25;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.faq-item p {
+    font-size: 1.05rem;
+    color: #5c564b;
+}
+
+/* CONTACT */
+.contact-box {
+    text-align: left;
+}
+
+.contact-details {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    background-color: #f7f2e1;
+    border: 3px solid #3b372e;
+    box-shadow: 4px 4px 0px #dfba53;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+}
+
+.contact-item .label {
+    font-weight: 700;
+    color: #2e2b25;
+}
+
+.contact-item .value {
+    color: #2e2b25;
+    background-color: #dfba53;
+    padding: 4px 12px;
+    border: 2px solid #3b372e;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.contact-item .value:hover {
+    background-color: #d1ab45;
+}
+
+/* BUTOANE CU ANIMAȚII INTERACTIVE */
+.btn-primary {
+    background-color: #3b372e;
+    color: #f7f2e1;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 3px solid #3b372e;
+    box-shadow: 4px 4px 0px #dfba53;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #27241e;
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px #dfba53;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #3b372e;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 3px solid #3b372e;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ded3b4;
+    transform: translateY(-2px);
+}
+
+.card-btn {
+    display: inline-block;
+}
+
+/* FOOTER */
+footer {
+    background-color: #27241e;
+    color: #dfba53;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 1rem;
+    font-weight: 600;
+    border-top: 3px solid #3b372e;
+}
+
+/* RESPONSIVE PENTRU TELEFON */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .main-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-grid {
+        flex-direction: column-reverse;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
